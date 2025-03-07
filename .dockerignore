@@ -24,6 +24,3 @@ yarn-error.log
 
 # Platform specific
 .DS_Store
-
-# Fly.io specific
-fly.toml
