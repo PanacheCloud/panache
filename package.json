@@ -64,13 +64,15 @@
     "@adonisjs/static": "^1.1.1",
     "@adonisjs/vite": "^4.0.0",
     "@inertiajs/react": "^2.0.4",
+    "@tailwindcss/vite": "^4.0.12",
     "@vinejs/vine": "^3.0.0",
     "edge.js": "^6.2.1",
     "luxon": "^3.5.0",
     "pg": "^8.13.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "reflect-metadata": "^0.2.2"
+    "reflect-metadata": "^0.2.2",
+    "tailwindcss": "^4.0.12"
   },
   "hotHook": {
     "boundaries": [

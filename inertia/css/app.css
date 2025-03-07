@@ -1,10 +1,6 @@
-* {
-  margin: 0;
-  padding: 0;
-}
+@import "tailwindcss";
 
-html,
-body {
-  height: 100%;
-  width: 100%;
+@theme {
+    --font-sans: "Inter", sans-serif;
+    --font-serif: "Instrument Serif", serif;
 }
