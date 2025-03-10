@@ -1,15 +1,16 @@
-import { Footer } from '~/components/footer'
-import { Header } from '~/components/header'
-import { Hero } from '~/components/hero'
+import { HeroSection } from '~/components/about/hero-section'
+import { WhySection } from '~/components/about/why-section'
+import { HowSection } from '~/components/about/how-section'
+import { WhatSection } from '~/components/about/what-section'
+import { PublicLayout } from '~/components/public-layout'
 
 export default function Home() {
   return (
-    <>
-      <Header />
-      <main className="min-h-[calc(100vh-73px-93px)] sm:min-h-[calc(100vh-50px-53px)] max-w-3xl mx-auto px-4 sm:px-0 py-8 sm:py-16">
-        <Hero />
-      </main>
-      <Footer />
-    </>
+    <PublicLayout>
+      <HeroSection />
+      <WhySection />
+      <HowSection />
+      <WhatSection />
+    </PublicLayout>
   )
 }

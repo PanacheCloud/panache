@@ -1,13 +1,6 @@
 import { Link } from '@inertiajs/react'
 import { DiscordIcon, GitHubIcon } from './icons'
-
-function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
-  return (
-    <Link className="text-sm px-3 py-1.5 rounded-md transition-colors" href={href}>
-      {children}
-    </Link>
-  )
-}
+import { NavLink } from './header/nav-link'
 
 export function Header() {
   return (
@@ -18,7 +11,6 @@ export function Header() {
           <nav className="flex flex-wrap gap-4">
             <NavLink href="/">About</NavLink>
             <NavLink href="/blog">Blog</NavLink>
-            <NavLink href="/documentation">Documentation</NavLink>
           </nav>
         </div>
         <div className="flex flex-wrap items-center gap-4">
@@ -28,10 +20,10 @@ export function Header() {
           <a className="hover:opacity-80 transition-opacity" href="https://github.com/panachecloud">
             <GitHubIcon className="w-5 h-5 fill-neutral-700" />
           </a>
-          <Link className="btn btn-secondary" href="/log-in">
-            Log in
+          <Link className="btn btn-secondary" href="/auth/sign-in">
+            Sign in
           </Link>
-          <Link className="btn btn-primary" href="/sign-up">
+          <Link className="btn btn-primary" href="/auth/sign-up">
             Sign up
           </Link>
         </div>
