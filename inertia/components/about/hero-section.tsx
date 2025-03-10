@@ -28,7 +28,7 @@ export function HeroSection() {
 
       <div className="flex items-center justify-center flex-wrap gap-2">
         <Link className="btn btn-primary" href="/auth/sign-up">
-          Get started (for free) →
+          Get started (it's free) →
         </Link>
         <a className="btn btn-secondary" href="https://github.com/panachecloud/panache">
           <GitHubIcon className="w-4 h-4" />
