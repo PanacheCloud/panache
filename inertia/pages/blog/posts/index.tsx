@@ -23,11 +23,13 @@ function PostsGrid({ posts }: { posts: Post[] }) {
       {posts.map((post) => (
         <article key={post.slug} className="flex flex-col items-start justify-between">
           <div className="relative w-full">
-            {post.imageUrl ? (<img
-              src={post.imageUrl}
-              alt=""
-              className="aspect-[16/9] max-h-48 w-full rounded-md bg-neutral-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
-            />) : null}
+            {post.imageUrl ? (
+              <img
+                src={post.imageUrl}
+                alt=""
+                className="aspect-[16/9] max-h-48 w-full rounded-md bg-neutral-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
+              />
+            ) : null}
             <div className="absolute inset-0 rounded-md ring-1 ring-inset ring-neutral-900/10" />
           </div>
           <div className="max-w-xl">

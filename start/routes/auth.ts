@@ -9,12 +9,18 @@ router.get('/auth/sign-in', [SignInController, 'show']).as('auth.sign-in.show')
 router.post('/auth/sign-in', [SignInController, 'handle']).as('auth.sign-in.handle')
 
 const ForgotPasswordController = () => import('#controllers/auth/forgot-password-controller')
-router.get('/auth/forgot-password', [ForgotPasswordController, 'show']).as('auth.forgot-password.show')
-router.post('/auth/forgot-password', [ForgotPasswordController, 'handle']).as('auth.forgot-password.handle')
+router
+  .get('/auth/forgot-password', [ForgotPasswordController, 'show'])
+  .as('auth.forgot-password.show')
+router
+  .post('/auth/forgot-password', [ForgotPasswordController, 'handle'])
+  .as('auth.forgot-password.handle')
 
 const ResetPasswordController = () => import('#controllers/auth/reset-password-controller')
 router.get('/auth/reset-password', [ResetPasswordController, 'show']).as('auth.reset-password.show')
-router.post('/auth/reset-password', [ResetPasswordController, 'handle']).as('auth.reset-password.handle')
+router
+  .post('/auth/reset-password', [ResetPasswordController, 'handle'])
+  .as('auth.reset-password.handle')
 
 const GitHubController = () => import('#controllers/auth/github-controller')
 router.get('/auth/github/redirect', [GitHubController, 'redirect']).as('auth.github.redirect')

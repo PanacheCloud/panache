@@ -56,7 +56,7 @@ export default function SignInPage() {
                 type="email"
                 placeholder="cyrano@bergerac.fr"
                 value={form.data.email}
-                onChange={e => form.setData('email', e.target.value)}
+                onChange={(e) => form.setData('email', e.target.value)}
               />
               <Error errorKey="email" />
             </div>
@@ -69,7 +69,7 @@ export default function SignInPage() {
                 type="password"
                 placeholder="••••••••••••••"
                 value={form.data.password}
-                onChange={e => form.setData('password', e.target.value)}
+                onChange={(e) => form.setData('password', e.target.value)}
               />
               <Error errorKey="password" />
             </div>

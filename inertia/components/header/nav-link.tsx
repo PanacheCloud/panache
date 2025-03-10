@@ -13,8 +13,8 @@ export function NavLink({ href, children }: NavLinkProps) {
   return (
     <Link
       className={`text-sm px-3 py-1.5 rounded-md transition-colors ${
-        isActive 
-          ? 'text-neutral-900 bg-neutral-200' 
+        isActive
+          ? 'text-neutral-900 bg-neutral-200'
           : 'text-neutral-600 hover:text-neutral-900 hover:bg-neutral-200'
       }`}
       href={href}
@@ -22,4 +22,4 @@ export function NavLink({ href, children }: NavLinkProps) {
       {children}
     </Link>
   )
-} 
+}

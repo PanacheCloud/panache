@@ -1,5 +1,6 @@
 import User from '#models/user'
 import type { HttpContext } from '@adonisjs/core/http'
+import logger from '@adonisjs/core/services/logger'
 
 export default class AuthGithubController {
   async redirect({ ally }: HttpContext) {
@@ -21,17 +22,22 @@ export default class AuthGithubController {
       return gh.getError()
     }
 
-    const githubUser = await gh.user()
+    try {
+      const githubUser = await gh.user()
 
-    let user = await User.findBy('email', githubUser.email)
-    if (!user) {
-      user = await User.create({
-        email: githubUser.email,
-        fullName: githubUser.name,
-      })
+      let user = await User.findBy('email', githubUser.email)
+      if (!user) {
+        user = await User.create({
+          email: githubUser.email,
+          fullName: githubUser.name,
+        })
+      }
+      await auth.use('web').login(user)
+
+      return response.redirect().toRoute('servers.index')
+    } catch (error) {
+      logger.error({ error }, 'Error during GitHub authentication callback')
+      return response.internalServerError('Something went wrong')
     }
-    await auth.use('web').login(user)
-
-    return response.redirect().toRoute('servers.index')
   }
 }

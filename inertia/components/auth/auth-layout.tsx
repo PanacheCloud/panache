@@ -14,24 +14,24 @@ export function AuthLayout({ children }: AuthLayoutProps) {
           </Link>
         </div>
         {children}
-      <p className="max-w-xs mx-auto text-center text-sm text-neutral-500">
-        By clicking continue, you agree to our
-        <br />{' '}
-        <a
-          href="/terms-of-service"
-          className="underline underline-offset-4 text-blue-700 hover:text-blue-500 transition-colors"
-        >
-          Terms of Service
-        </a>{' '}
-        and{' '}
-        <a
-          href="/privacy-policy"
-          className="underline underline-offset-4 text-blue-700 hover:text-blue-500 transition-colors"
-        >
-          Privacy Policy
-        </a>
-        .
-      </p>
+        <p className="max-w-xs mx-auto text-center text-sm text-neutral-500">
+          By clicking continue, you agree to our
+          <br />{' '}
+          <a
+            href="/terms-of-service"
+            className="underline underline-offset-4 text-blue-700 hover:text-blue-500 transition-colors"
+          >
+            Terms of Service
+          </a>{' '}
+          and{' '}
+          <a
+            href="/privacy-policy"
+            className="underline underline-offset-4 text-blue-700 hover:text-blue-500 transition-colors"
+          >
+            Privacy Policy
+          </a>
+          .
+        </p>
       </div>
     </div>
   )
